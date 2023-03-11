@@ -689,10 +689,7 @@
      * REUSED STYLE
      */
   
-    .container {
-      max-width: 580px;
-      margin-inline: auto;
-    }
+    
   
     .btn {
       --fs-5: 16px;
@@ -779,7 +776,7 @@
      */
   
     .footer .container {
-      display: grid;
+      
       grid-template-columns: 1fr 1fr;
       gap: 30px;
     }

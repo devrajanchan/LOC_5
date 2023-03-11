@@ -1,17 +1,22 @@
 
 import './App.css';
-import Home from './components/Home';
+import { Route, Router, Routes } from 'react-router-dom';
+
+import Home from './Components/Home';
+// import BasicExample from './pages/CardsDisplay/ExampleCards';
+import Example from './pages/CardsDisplay/Example';
 // import MainImage from './Components/Navbar/MainImage';
 // import Login from './Components/Login/Login';
-import Navbar from './components/Navbar/Navbar';
-import Slider from './components/Slider';
-import Login from './components/Login/Login';
+
+import Landing from './pages/Landing/Landing';
+import Footer  from './Components/Footer/Footer';
+import Navbar from './Components/Navbar/Navbar';
+import Status from './Components/Status/Status';
+import Login from './Components/Login/Login';
 import Register from './Register';
 import Profile from './components/Profile/Profile';
-import Profiledisplay from "./components/ProfileDisplay/ProfileDisplay"
 import { Route, Router, Routes } from 'react-router-dom';
 import Landing from "./pages/landing"
-import ProfileDisplay from './components/ProfileDisplay/ProfileDisplay';
 
 // import Services from './Components/Navbar/Services';
 // import Landing from  "./Components/Landing"
@@ -32,28 +37,28 @@ function App() {
     <>
     <Navbar/>
     <Routes>
-        {/* <Route exact path="/users/:id" element={<Profdisplay />}></Route> */}
+        
         <Route exact path="/" element={<Landing />}></Route>
+        <Route exact path="/home" element={<Home />}></Route>
+        <Route exact path="/status" element={<Status/>} ></Route>
+     
+        {/* <Route exact path="/profile" element={<Profile />}></Route> */}
+        <Route exact path="/example" element={<Example />}></Route>
+
+        {/* <Route exact path="/community" element={<Community />}></Route> */}
+        <Route exact path="/profiledisplay" element={<ProfileDisplay />}></Route>
+        <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/register" element={<Register />}></Route>
         <Route exact path="/login" element={<Login/>} ></Route>
         {/* <Route exact path="/find" element={<Profile />}></Route> */}
         <Route exact path="/profile" element={<Profile />}></Route>
-        <Route exact path="/profiledisplay" element={<Profiledisplay />}></Route>
         {/* <Route exact path="/recommend" element={<Recommend />}></Route>
         <Route exact path="/community" element={<Community />}></Route>
         <Route exact path="/request" element={<Request />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/register" element={<Register />}></Route> */}
         </Routes>
-        
-
-
-   
-
-
-  
-   
-       
+      <Footer/>
     </>
     
      

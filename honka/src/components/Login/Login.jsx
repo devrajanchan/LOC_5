@@ -93,6 +93,8 @@ const handleChange = e => {
           </div>
 
           <div className="d-flex justify-content-between align-items-center">
+            {/* <!-- Checkbox --> */}
+        
             <a href="#!" className="text-body">Forgot password?</a>
           </div>
 
