@@ -1,4 +1,4 @@
-const loginEmp = require("../model/loginEmployer")
+const loginEmp = require("../model/loginEmployee")
 const Emp = require("../model/Employee")
 const jwt=require("jsonwebtoken")
 const multer = require('multer');
@@ -39,10 +39,13 @@ exports.Register = async (req,res)=>{
 exports.Login = async (req,res)=>{
     // check if email exists
     try{
-        console.log(req.body)
+        console.log("login: ",req.body)
         const emp = await loginEmp.findOne({ email: req.body.email })
+        console.log(emp)
         if(!emp){
+          console.log("logged use not exist")
           return res.status(400).send("user doesnt exist")
+          
         }
 
         try{

@@ -28,9 +28,10 @@ const Profile = () => {
         })
       } 
 
+
       const Prof = (e) => {
         e.preventDefault();
-        userbk={
+        const userbk={
             email: user.email,
             firstname: user.firstname,
             lastname: user.lastname,
@@ -39,19 +40,21 @@ const Profile = () => {
             gap: user.gap,
             loc: user.loc,
             exp: user.exp,
+            skill:user.skill
         }
         console.log("Hello BK: ",userbk)
-        const {id} = useParams()
-        console.log(id)
-        axios.post(`http://localhost:8000/api/users?id=${id}`, userbk,{mode:"cors"})  
+        // const {id} = useParams()
+        // console.log(id)
+        console.log(user)
+        axios.post(`http://localhost:5000/employee/profile`, userbk,{mode:"cors"})  
         .then(response => {
           setUser(response.data);
+          console.log(response.data)
         })
         .catch(error => {
           console.error(error);
         })
       }
-
   return (
     <div>
      
@@ -104,7 +107,7 @@ const Profile = () => {
                                 <label for="meal_preference">Skills</label>
                             </div>
                             <div className="select-list">
-                                <select onChange={handleChange} name="skill" id="skill">
+                                <select name="skill" id="skill">
                                     <option value="Vegetarian">Vegetarian</option>
                                     <option value="Kosher">Kosher</option>
                                     <option value="Asian Vegetarian">Asian Vegetarian</option>
@@ -118,7 +121,7 @@ const Profile = () => {
                         </div>
                         <div className="form-input">
                             <label for="blank_name">Location</label>
-                            <input className='innput' type="text" name="loc" id="Location" onChange={handleChange} />
+                            <input className='innput' type="text" name="loc" id="Location" onChange={handleChange}/>
                         </div>
                         <div className="form-input">
                             <label for="phone_number" className="required">Experience</label>
@@ -131,8 +134,11 @@ const Profile = () => {
                     </div>
                 </div>
                 
+
+         
+
                 <div className="form-submit">
-                    <input className='innput submit mt-4' type="submit" value="Submit" id="submit" name="submit"/>
+                    <input className='innput submit mt-4' type="submit" value="Submit" onClick={Prof} id="submit" name="submit" />
                     <input className='innput submit' type="submit" value="Reset"  id="reset" name="reset" />
                 </div>
             </form>

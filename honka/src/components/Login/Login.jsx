@@ -1,11 +1,54 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './login.css'
+import axios from 'axios';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 // import Register from '../Register/Register';
 
 const Login = () => {
+
+  const [user, setUser] = useState({
+    email: "",
+    password:""
+})
+
+const handleChange = e => {
+    // const { name, value } = e.target
+    console.log(user)
+    const name=e.target.name
+    const value=e.target.value
+    setUser({
+        ...user,
+        [name]: value
+    })
+  } 
+
+
+  const Log = (e) => {
+    e.preventDefault();
+    const userbk={
+        email: user.email,
+        password:user.password
+    }
+    console.log("Hello BK: ",userbk)
+    // const {id} = useParams()
+    // console.log(id)
+    console.log(userbk)
+    axios.post(`http://localhost:5000/employee/login`, userbk,{mode:"cors"})  
+    .then(response => {
+      setUser(response.data);
+      console.log(response.data)
+    })
+    .catch(error => {
+      console.error(error);
+    })
+  }
+
+
+
+
+
   return (
     <div className='mt-5'>
       <section className="vh-100" >
@@ -37,14 +80,14 @@ const Login = () => {
 
           {/* <!-- Email input --> */}
           <div className="form-outline mb-4">
-            <input type="email" id="form3Example3" className="form-control form-control-lg"
-              placeholder="Enter a valid email address" />
+            <input type="email" id="form3Example3" name="email" className="form-control form-control-lg"
+              placeholder="Enter a valid email address" onChange={handleChange}/>
             <label className="form-label" for="form3Example3">Email address</label>
           </div>
 
           <div className="form-outline mb-3">
-            <input type="password" id="form3Example4" className="form-control form-control-lg"
-              placeholder="Enter password" />
+            <input type="password" id="form3Example4" name="password" className="form-control form-control-lg"
+              placeholder="Enter password" onChange={handleChange}/>
             <label className="form-label" for="form3Example4">Password</label>
           </div>
 
@@ -61,7 +104,7 @@ const Login = () => {
 
           <div className="text-center text-lg-start mt-4 pt-2" >
             <button type="button" className="btn btn-primary btn-lg"
-              style={{paddingLeft:"2.5rem",paddingRight:"2.5rem",margin:"2%"}}>Login</button>
+              style={{paddingLeft:"2.5rem",paddingRight:"2.5rem",margin:"2%"}} onClick={Log}>Login</button>
             <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
                 className="link-danger " >Register</a></p>
           </div>
