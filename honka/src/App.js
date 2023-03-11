@@ -11,22 +11,29 @@ import Example from './pages/CardsDisplay/Example';
 import Landing from './pages/Landing/Landing';
 import Footer  from './Components/Footer/Footer';
 import Navbar from './Components/Navbar/Navbar';
-import Slider from './Components/Slider';
+import Status from './Components/Status/Status';
 import Login from './Components/Login/Login';
 import Register from './Register';
 import Profile from './Components/Profile/Profile';
-import Status from './Components/Status/Status';
-import ProfileDisplay from './Components/ProfileDisplay/ProfileDisplay';
+import ProfileDisplay from "./Components/ProfileDisplay/ProfileDisplay"
+
+// import Services from './Components/Navbar/Services';
+// import Landing from  "./Components/Landing"
+// import TravelHome from './Components/TravelHome';
+// import Footer from  "./Components/Footer"
+// import { Route, Router, Routes } from 'react-router-dom';
+// import Profile from './Profile/Profile';
+// import Community from './Components/Community';
+
+// import Register from './Components/Register/Register';
 
 
+// import {Route, Switch, Redirect} from "react-router-dom";
 
 
-
-
-const App = () => {
+function App() {
   return (
     <>
-  
     <Navbar/>
     <Routes>
         
@@ -45,7 +52,7 @@ const App = () => {
       <Footer/>
     </>
     
-    
+     
   );
 }
 
