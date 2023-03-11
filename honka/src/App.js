@@ -34,14 +34,6 @@ function App() {
     <Landing/>
     <Footer/> */}
     <Example/>
-
-    
-        
-
-
-   
-
-
   
       {/* <Footer /> */}
        
