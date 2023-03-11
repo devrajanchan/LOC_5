@@ -32,33 +32,25 @@ import Landing from "./pages/landing";
 
 
 // import {Route, Switch, Redirect} from "react-router-dom";
-
+import MumbaiMap from './Map';
 
 function App() {
   return (
     <>
     <Navbar/>
+    <MumbaiMap/>
     <Routes>
-        
         <Route exact path="/" element={<Landing />}></Route>
         <Route exact path="/home" element={<Home />}></Route>
         <Route exact path="/status" element={<Status/>} ></Route>
      
-        {/* <Route exact path="/profile" element={<Profile />}></Route> */}
+        <Route exact path="/profile" element={<Profile />}></Route>
         <Route exact path="/example" element={<Example />}></Route>
 
-        {/* <Route exact path="/community" element={<Community />}></Route> */}
+        <Route exact path="/community" element={<Community />}></Route>
         <Route exact path="/profiledisplay/:id" element={<ProfileDisplay />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/register" element={<Register />}></Route>
-        <Route exact path="/login" element={<Login/>} ></Route>
-        {/* <Route exact path="/find" element={<Profile />}></Route> */}
-        <Route exact path="/profile" element={<Profile />}></Route>
-        {/* <Route exact path="/recommend" element={<Recommend />}></Route>
-        <Route exact path="/community" element={<Community />}></Route>
-        <Route exact path="/request" element={<Request />}></Route>
-        <Route exact path="/login" element={<Login />}></Route>
-        <Route exact path="/register" element={<Register />}></Route> */}
         </Routes>
       <Footer/>
     </>
