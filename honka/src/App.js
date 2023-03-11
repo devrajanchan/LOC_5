@@ -1,12 +1,16 @@
 
 import './App.css';
-// import Home from './Components/Home';
+import Home from './Components/Home';
+// import BasicExample from './pages/CardsDisplay/ExampleCards';
+import Example from './pages/CardsDisplay/Example';
 // import MainImage from './Components/Navbar/MainImage';
 // import Login from './Components/Login/Login';
-// import Navbar from "./Components/Navbar"
-import { Landing } from './pages/Landing/Landing';
+import Navbar from './Components/Navbar';
+import Landing from './pages/Landing/Landing';
+import { Footer } from './Components/Footer';
 // import Services from './Components/Navbar/Services';
 // import Landing from  "./Components/Landing"
+// import TravelHome from './Components/TravelHome';
 // import Footer from  "./Components/Footer"
 // import { Route, Router, Routes } from 'react-router-dom';
 // import Profile from './Profile/Profile';
@@ -23,7 +27,21 @@ import { Landing } from './pages/Landing/Landing';
 function App() {
   return (
     <>
-    <Landing/>   
+    {/* <Navbar />
+    <Landing/>
+    <Footer/> */}
+    <Example/>
+
+    
+        
+
+
+   
+
+
+  
+      {/* <Footer /> */}
+       
     </>
     
      
