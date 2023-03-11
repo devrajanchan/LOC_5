@@ -5,9 +5,10 @@ import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 // import Register from '../Register/Register';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-
+  const navigate = useNavigate()
   const [user, setUser] = useState({
     email: "",
     password:""
@@ -43,6 +44,7 @@ const handleChange = e => {
     .catch(error => {
       console.error(error);
     })
+    navigate("/profile")
   }
 
 

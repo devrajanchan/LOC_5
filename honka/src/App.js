@@ -2,21 +2,23 @@
 import './App.css';
 import { Route, Router, Routes } from 'react-router-dom';
 
-import Home from './Components/Home';
+import Home from './components/Home';
 // import BasicExample from './pages/CardsDisplay/ExampleCards';
 import Example from './pages/CardsDisplay/Example';
 // import MainImage from './Components/Navbar/MainImage';
 // import Login from './Components/Login/Login';
 
-import Landing from './pages/Landing/Landing';
-import Footer  from './Components/Footer/Footer';
-import Navbar from './Components/Navbar/Navbar';
-import Status from './Components/Status/Status';
-import Login from './Components/Login/Login';
+// import Landing from './pages/Landing/Landing';
+import Footer  from './components/Footer/Footer';
+
+import Navbar from './components/Navbar/Navbar';
+import Status from './components/Status/Status';
+import Login from './components/Login/Login';
 import Register from './Register';
 import Profile from './components/Profile/Profile';
-import { Route, Router, Routes } from 'react-router-dom';
-import Landing from "./pages/landing"
+import ProfileDisplay from './components/ProfileDisplay/ProfileDisplay';
+
+import Landing from "./pages/landing";
 
 // import Services from './Components/Navbar/Services';
 // import Landing from  "./Components/Landing"
@@ -46,7 +48,7 @@ function App() {
         <Route exact path="/example" element={<Example />}></Route>
 
         {/* <Route exact path="/community" element={<Community />}></Route> */}
-        <Route exact path="/profiledisplay" element={<ProfileDisplay />}></Route>
+        <Route exact path="/profiledisplay/:id" element={<ProfileDisplay />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/register" element={<Register />}></Route>
         <Route exact path="/login" element={<Login/>} ></Route>
