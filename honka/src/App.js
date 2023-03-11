@@ -29,26 +29,27 @@ import ProfileDisplay from "./Components/ProfileDisplay/ProfileDisplay"
 
 
 // import {Route, Switch, Redirect} from "react-router-dom";
-
+import MumbaiMap from './Map';
 
 function App() {
   return (
     <>
     <Navbar/>
-    <Routes>
+    <MumbaiMap/>
+    {/* { <Routes>
         
         <Route exact path="/" element={<Landing />}></Route>
         <Route exact path="/home" element={<Home />}></Route>
         <Route exact path="/status" element={<Status/>} ></Route>
      
-        {/* <Route exact path="/profile" element={<Profile />}></Route> */}
+        <Route exact path="/profile" element={<Profile />}></Route>
         <Route exact path="/example" element={<Example />}></Route>
 
-        {/* <Route exact path="/community" element={<Community />}></Route> */}
+        <Route exact path="/community" element={<Community />}></Route>
         <Route exact path="/profiledisplay" element={<ProfileDisplay />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/register" element={<Register />}></Route>
-        </Routes>
+        </Routes> } */}
       <Footer/>
     </>
     
