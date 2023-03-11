@@ -3,7 +3,11 @@ import './App.css';
 import Home from './components/Home';
 // import MainImage from './Components/Navbar/MainImage';
 // import Login from './Components/Login/Login';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
+import Slider from './components/Slider';
+import Login from './components/Login/Login';
+import Register from './Register';
+import Profile from './components/Profile/Profile';
 // import Services from './Components/Navbar/Services';
 // import Landing from  "./Components/Landing"
 // import TravelHome from './Components/TravelHome';
@@ -11,9 +15,7 @@ import Navbar from './components/Navbar';
 // import { Route, Router, Routes } from 'react-router-dom';
 // import Profile from './Profile/Profile';
 // import Community from './Components/Community';
-// import Recommend from './Components/Recommend';
-// import Request from './Components/Request';
-// import Login from './Login';
+
 // import Register from './Components/Register/Register';
 
 
@@ -23,7 +25,10 @@ import Navbar from './components/Navbar';
 function App() {
   return (
     <>
-    <Navbar />
+    <Navbar/>
+
+    <Profile/>
+    {/* <Home/> */}
         
 
 
