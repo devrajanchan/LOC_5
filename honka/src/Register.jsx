@@ -2,8 +2,10 @@ import React from 'react'
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import {UseNavigate} from "react-router-dom"
 
 const Register = () => {
+    
   return (
     <div>
       <section className="vh-100">

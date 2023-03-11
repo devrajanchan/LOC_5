@@ -1,6 +1,7 @@
 import React from 'react'
+import "../Navbar/navbar.css"
 
-export const Footer = () => {
+ const Footer = () => {
   return (
     <div>
         <footer id="footer" class="footer">
@@ -88,3 +89,4 @@ export const Footer = () => {
     </div>
   )
 }
+export default Footer
