@@ -11,8 +11,8 @@ export default function Example() {
 
   return (
     <>
-      {data.map(item => (
-        <ExampleCards  header={item.header} description={item.description} />
+      {data.map((item) => (
+        <ExampleCards i={item}/>
       ))}
     </>
   );

@@ -5,9 +5,9 @@ import Home from './Components/Home';
 import Example from './pages/CardsDisplay/Example';
 // import MainImage from './Components/Navbar/MainImage';
 // import Login from './Components/Login/Login';
-//import Navbar from './Components/Navbar';
-import Landing from './pages/Landing/Landing';
-import Footer from './Components/Footer';
+// import Navbar from './Components/Navbar/Navbar'
+// import Landing from './pages/Landing/Landing';
+// import Footer from './Components/Footer'
 import Slider from './Components/Slider';
 import Login from './Components/Login/Login';
 import Register from './Register';
@@ -30,8 +30,8 @@ function App() {
   return (
     <>
     {/* <Navbar />
-    <Landing/>
-    <Footer/> */}
+    <Landing/>  */}
+   {/* <Footer/> */}
     <Example/>
   
       {/* <Footer /> */}
