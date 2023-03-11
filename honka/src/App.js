@@ -1,13 +1,15 @@
 
 import './App.css';
-import Home from './components/Home';
+import Home from './Components/Home';
 // import MainImage from './Components/Navbar/MainImage';
 // import Login from './Components/Login/Login';
-import Navbar from './components/Navbar/Navbar';
-import Slider from './components/Slider';
-import Login from './components/Login/Login';
+import Navbar from './Components/Navbar/Navbar';
+import Slider from './Components/Slider';
+import Login from './Components/Login/Login';
 import Register from './Register';
-import Profile from './components/Profile/Profile';
+import Profile from './Components/Profile/Profile';
+import Status from './Components/Status/Status';
+import ProfileDisplay from './Components/ProfileDisplay/ProfileDisplay';
 // import Services from './Components/Navbar/Services';
 // import Landing from  "./Components/Landing"
 // import TravelHome from './Components/TravelHome';
@@ -27,7 +29,7 @@ function App() {
     <>
     <Navbar/>
 
-    <Profile/>
+    <ProfileDisplay/>
     {/* <Home/> */}
         
 
