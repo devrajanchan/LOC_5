@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+
 import './App.css';
+// import Home from './Components/Home';
+// import MainImage from './Components/Navbar/MainImage';
+// import Login from './Components/Login/Login';
+// import Navbar from "./Components/Navbar"
+import { Landing } from './pages/Landing/Landing';
+// import Services from './Components/Navbar/Services';
+// import Landing from  "./Components/Landing"
+// import Footer from  "./Components/Footer"
+// import { Route, Router, Routes } from 'react-router-dom';
+// import Profile from './Profile/Profile';
+// import Community from './Components/Community';
+// import Recommend from './Components/Recommend';
+// import Request from './Components/Request';
+// import Login from './Login';
+// import Register from './Components/Register/Register';
+
+
+// import {Route, Switch, Redirect} from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Landing/>   
+    </>
+    
+     
   );
 }
 
