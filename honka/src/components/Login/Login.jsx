@@ -5,9 +5,12 @@ import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 // import Register from '../Register/Register';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+
 
 const Login = () => {
-
+  const navigate = useNavigate()
   const [user, setUser] = useState({
     email: "",
     password:""
@@ -43,6 +46,7 @@ const handleChange = e => {
     .catch(error => {
       console.error(error);
     })
+    navigate("/profile")
   }
 
 
@@ -101,8 +105,10 @@ const handleChange = e => {
           <div className="text-center text-lg-start mt-4 pt-2" >
             <button type="button" className="btn btn-primary btn-lg"
               style={{paddingLeft:"2.5rem",paddingRight:"2.5rem",margin:"2%"}} onClick={Log}>Login</button>
-            <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
-                className="link-danger " >Register</a></p>
+            <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? 
+            
+            <Link to='/register' className="link-danger ">Register</Link>
+                </p>
           </div>
 
         </form>

@@ -43,7 +43,7 @@ const Register = () => {
     .catch(error => {
       console.error(error);
     })
-    navigate("/profile")
+    navigate("/login")
   }
 
 

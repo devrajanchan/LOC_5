@@ -27,6 +27,11 @@ const Navbar = () => {
           </Link>
           </li>
           <li>
+          <Link to="/maps" className="nav-link scrollto ">
+          Maps
+          </Link>
+          </li>
+          <li>
           
           </li><li>
           <Link to="/status" className="nav-link scrollto ">
