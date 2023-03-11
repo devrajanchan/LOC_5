@@ -1,7 +1,60 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "./profile.css"
 import pic from "../img/features.png"
+import axios from 'axios';
+
 const Profile = () => {
+
+    const [user, setUser] = useState({
+        email: "",
+        firstname: "",
+        lastname: "",
+        birth: "",
+        linkeldin:"",
+        gap:"",
+        loc:"",
+        exp:"",
+        skills:[""]
+    })
+
+    const handleChange = e => {
+        // const { name, value } = e.target
+        console.log(user)
+        const name=e.target.name
+        const value=e.target.value
+        setUser({
+            ...user,
+            [name]: value
+        })
+      } 
+
+
+      const Prof = (e) => {
+        e.preventDefault();
+        const userbk={
+            email: user.email,
+            firstname: user.firstname,
+            lastname: user.lastname,
+            birth: user.birth,
+            linkeldin: user.linkeldin,
+            gap: user.gap,
+            loc: user.loc,
+            exp: user.exp,
+            skill:user.skill
+        }
+        console.log("Hello BK: ",userbk)
+        // const {id} = useParams()
+        // console.log(id)
+        console.log(user)
+        axios.post(`http://localhost:5000/employee/profile`, userbk,{mode:"cors"})  
+        .then(response => {
+          setUser(response.data);
+          console.log(response.data)
+        })
+        .catch(error => {
+          console.error(error);
+        })
+      }
   return (
     <div>
      
@@ -22,24 +75,24 @@ const Profile = () => {
                     <div className="form-group">
                         <div className="form-input">
                             <label for="first_name" className="required">First name</label>
-                            <input className='innput'  type="text" name="first_name" id="first_name" />
+                            <input className='innput'  type="text" name="firstname" id="first_name" onChange={handleChange}/>
                         </div>
                         <div className="form-input">
                             <label for="last_name" className="required">Last name</label>
-                            <input className='innput' type="text" name="last_name" id="last_name" />
+                            <input className='innput' type="text" name="lastname" id="last_name" onChange={handleChange}/>
                         </div>
                          <div className="form-input">
                             <label for="email" className="required">Email</label>
-                            <input  className='innput' type="text" name="email" id="email" />
+                            <input  className='innput' type="text" name="email" id="email" onChange={handleChange}/>
                         </div>
                         <div className="form-input">
                             <label for="company" className="required">DOB</label>
-                            <input className='innput' type="date" name="company" id="DOB" />
+                            <input className='innput' type="date" name="birth" id="DOB" onChange={handleChange}/>
                         </div>
                        
                         <div className="form-input">
                             <label for="phone_number" className="required">LinkedIn Profile</label>
-                            <input className='innput' type="text" name="phone_number" id="Linkedln" />
+                            <input className='innput' type="text" name="linkeldin" id="Linkedln" onChange={handleChange}/>
                         </div>
 
                         
@@ -64,25 +117,28 @@ const Profile = () => {
                         
                         <div className="form-input">
                             <label for="chequeno">Gap Years</label>
-                            <input className='innput' type="number" name="gap" id="gap" />
+                            <input className='innput' type="number" name="gap" id="gap" onChange={handleChange}/>
                         </div>
                         <div className="form-input">
                             <label for="blank_name">Location</label>
-                            <input className='innput' type="text" name="Location" id="Location" />
+                            <input className='innput' type="text" name="loc" id="Location" onChange={handleChange}/>
                         </div>
                         <div className="form-input">
                             <label for="phone_number" className="required">Experience</label>
-                            <input className='innput' type="number" name="experience" id="experience" />
+                            <input className='innput' type="number" name="exp" id="experience" onChange={handleChange}/>
                         </div>
-                        <div className="form-input">
+                        {/* <div className="form-input">
                             <label for="phone_number" className="required">Resume</label>
                             <input className='innput' type="file" name="Resume" id="experience" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 
+
+         
+
                 <div className="form-submit">
-                    <input className='innput submit mt-4' type="submit" value="Submit"  id="submit" name="submit" />
+                    <input className='innput submit mt-4' type="submit" value="Submit" onClick={Prof} id="submit" name="submit" />
                     <input className='innput submit' type="submit" value="Reset"  id="reset" name="reset" />
                 </div>
             </form>

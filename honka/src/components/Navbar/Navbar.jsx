@@ -1,6 +1,7 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import "./navbar.css"
+
 
 const Navbar = () => {
   return (
@@ -16,13 +17,32 @@ const Navbar = () => {
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li>
+          <Link to="/" className="nav-link scrollto active">
+          Home
+          </Link></li>
+          <li>
+          <Link to="/example" className="nav-link scrollto ">
+          Jobs
+          </Link>
+          </li>
+          <li>
+          <Link to="/services" className="nav-link scrollto ">
+          Services
+          </Link>
+          </li><li>
+          <Link to="/status" className="nav-link scrollto ">
+          Status
+          </Link>
+          </li>
+          <li>
+          <Link to="/profiledisplay" className="nav-link scrollto ">
+          Profile
+          </Link>
+          </li>
+         
+          
+          {/* <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -38,9 +58,11 @@ const Navbar = () => {
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul>
-          </li>
+          </li> */}
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+          <Link to="/login" className="getstarted scrollto ">
+          Login
+          </Link>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
