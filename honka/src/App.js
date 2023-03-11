@@ -8,8 +8,10 @@ import Slider from './components/Slider';
 import Login from './components/Login/Login';
 import Register from './Register';
 import Profile from './components/Profile/Profile';
+import Profiledisplay from "./components/ProfileDisplay/ProfileDisplay"
 import { Route, Router, Routes } from 'react-router-dom';
 import Landing from "./pages/landing"
+import ProfileDisplay from './components/ProfileDisplay/ProfileDisplay';
 
 // import Services from './Components/Navbar/Services';
 // import Landing from  "./Components/Landing"
@@ -36,6 +38,7 @@ function App() {
         <Route exact path="/login" element={<Login/>} ></Route>
         {/* <Route exact path="/find" element={<Profile />}></Route> */}
         <Route exact path="/profile" element={<Profile />}></Route>
+        <Route exact path="/profiledisplay" element={<Profiledisplay />}></Route>
         {/* <Route exact path="/recommend" element={<Recommend />}></Route>
         <Route exact path="/community" element={<Community />}></Route>
         <Route exact path="/request" element={<Request />}></Route>

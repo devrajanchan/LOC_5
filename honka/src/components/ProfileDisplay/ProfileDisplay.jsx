@@ -1,8 +1,31 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import { useParams } from 'react-router-dom';
+import axios from "axios"
 
 const ProfileDisplay = () => {
+
+  const [user, setUser] = useState([]);
+  const {id} = useParams()
+
+  useEffect(() => {
+
+      
+      console.log(id)
+      axios.get(`http://localhost:5000/employee/profiledisplay?id=${id}`,{mode:"cors"})  
+      .then(response => {
+        setUser(response.data);
+        console.log(response.data)
+        console.log(user)
+      })
+      .catch(error => {
+        console.error(error);
+      })
+  },[]);
+
+
   return (
     <div>
+    
       <div className="container">
     <div className="main-body">
     
@@ -57,7 +80,7 @@ const ProfileDisplay = () => {
                       <h6 className="mb-0">First Name</h6>
                     </div>
                     <div className="col-sm-9 text-secondary" >
-                      Kenneth 
+                      {user.firstname} 
                     </div>
                   </div>
                   <hr/>
@@ -66,7 +89,7 @@ const ProfileDisplay = () => {
                       <h6 className="mb-0">Last Name</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
-                      Patel
+                      {user.lastname}
                     </div>
                   </div>
                   <hr/>
@@ -179,7 +202,9 @@ const ProfileDisplay = () => {
 
         </div>
     </div>
+       
     </div>
+
   )
 }
 

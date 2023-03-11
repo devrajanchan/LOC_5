@@ -80,25 +80,19 @@ const handleChange = e => {
 
           {/* <!-- Email input --> */}
           <div className="form-outline mb-4">
+          <label className="form-label" for="form3Example3">Email address</label>
             <input type="email" id="form3Example3" name="email" className="form-control form-control-lg"
               placeholder="Enter a valid email address" onChange={handleChange}/>
-            <label className="form-label" for="form3Example3">Email address</label>
           </div>
 
           <div className="form-outline mb-3">
+            <label className="form-label" for="form3Example4">Password</label>
             <input type="password" id="form3Example4" name="password" className="form-control form-control-lg"
               placeholder="Enter password" onChange={handleChange}/>
-            <label className="form-label" for="form3Example4">Password</label>
+            
           </div>
 
           <div className="d-flex justify-content-between align-items-center">
-            {/* <!-- Checkbox --> */}
-            <div className="form-check mb-0">
-              <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-              <label className="form-check-label" for="form2Example3">
-                Remember me
-              </label>
-            </div>
             <a href="#!" className="text-body">Forgot password?</a>
           </div>
 
