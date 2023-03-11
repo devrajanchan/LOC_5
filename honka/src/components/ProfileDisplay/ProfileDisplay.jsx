@@ -12,10 +12,11 @@ const ProfileDisplay = () => {
       
       console.log(id)
       axios.get(`http://localhost:5000/employee/profiledisplay?id=${id}`,{mode:"cors"})  
+      // axios.get(`http://localhost:5000/employee/profiledisplay?id=640c373fbe7a13b3b92f4edc`,{mode:"cors"})  
       .then(response => {
         setUser(response.data);
-        console.log(response.data)
-        console.log(user)
+        console.log('Response: ',response.data)
+        // console.log(user)
       })
       .catch(error => {
         console.error(error);
@@ -80,7 +81,7 @@ const ProfileDisplay = () => {
                       <h6 className="mb-0">First Name</h6>
                     </div>
                     <div className="col-sm-9 text-secondary" >
-                      {user.firstname} 
+                      {user ? user.firstname : "bhos bk"} 
                     </div>
                   </div>
                   <hr/>
@@ -89,7 +90,7 @@ const ProfileDisplay = () => {
                       <h6 className="mb-0">Last Name</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
-                      {user.lastname}
+                      {user ? user.lastname : "Kader in Dadar"}
                     </div>
                   </div>
                   <hr/>
@@ -98,18 +99,18 @@ const ProfileDisplay = () => {
                       <h6 className="mb-0">Email</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
-                      fip@jukmuh.al
+                    {user ? user.email : "null@g.com"}
                     </div>
                   </div>
                   <hr/>
-                  <div className="row">
+                  {/* <div className="row">
                     <div className="col-sm-3">
                       <h6 className="mb-0">Phone</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
                       (239) 816-9029
                     </div>
-                  </div>
+                  </div> */}
                   <hr/>
                   
                   <div className="row">
@@ -117,7 +118,7 @@ const ProfileDisplay = () => {
                       <h6 className="mb-0">DOB</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
-                      15/10/2022
+                    {user ? user.birth : "nullbirth"}
                     </div>
                   </div>
                   <hr/>
@@ -126,7 +127,7 @@ const ProfileDisplay = () => {
                       <h6 className="mb-0">Location</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
-                      Mumbai
+                    {user ? user.loc : "nullloc"}
                     </div>
                   </div>
                   <hr/>

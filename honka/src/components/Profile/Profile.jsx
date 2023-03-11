@@ -2,9 +2,10 @@ import React,{useState} from 'react'
 import "./profile.css"
 import pic from "../img/features.png"
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
-
+    const navigate = useNavigate()
     const [user, setUser] = useState({
         email: "",
         firstname: "",
@@ -54,6 +55,7 @@ const Profile = () => {
         .catch(error => {
           console.error(error);
         })
+        navigate("/")
       }
   return (
     <div>
