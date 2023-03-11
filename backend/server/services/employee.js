@@ -199,7 +199,20 @@ exports.Profiles= async (req,res)=>{
     }catch(e){
         res.status(500).send(e,": problem in finding email")
     }
+}
 
+exports.ProfileDisplay= async (req,res)=>{
+  const id = req.query.id;
+  try{
+    const data = await Emp.findById(id)
+    if(!data){
+      res.status(404).send({ message : "Not found user with id "+ id})
+  }else{
+      res.send(data)
+  }
+  }catch(e){
+    res.status(500).send({ message: "Error in retrieving user with id " + id})
+  }
 
 }
 

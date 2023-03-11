@@ -21,5 +21,6 @@ route.post("/register",employeeservices.Register)
 // route.post("/profile",employeeservices.createProfile)
 route.put("/profile/:id",employeeservices.updateProfile)
 route.post("/profile",employeeservices.Profiles)
+route.get("/profiledisplay",employeeservices.ProfileDisplay)
 
 module.exports=route

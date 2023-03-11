@@ -14,8 +14,9 @@ import Navbar from './Components/Navbar/Navbar';
 import Status from './Components/Status/Status';
 import Login from './Components/Login/Login';
 import Register from './Register';
-import Profile from './Components/Profile/Profile';
-import ProfileDisplay from "./Components/ProfileDisplay/ProfileDisplay"
+import Profile from './components/Profile/Profile';
+import { Route, Router, Routes } from 'react-router-dom';
+import Landing from "./pages/landing"
 
 // import Services from './Components/Navbar/Services';
 // import Landing from  "./Components/Landing"
@@ -36,8 +37,7 @@ function App() {
     <>
     <Navbar/>
     <MumbaiMap/>
-    {/* { <Routes>
-        
+    <Routes>
         <Route exact path="/" element={<Landing />}></Route>
         <Route exact path="/home" element={<Home />}></Route>
         <Route exact path="/status" element={<Status/>} ></Route>
@@ -49,7 +49,7 @@ function App() {
         <Route exact path="/profiledisplay" element={<ProfileDisplay />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/register" element={<Register />}></Route>
-        </Routes> } */}
+        </Routes>
       <Footer/>
     </>
     
