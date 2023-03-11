@@ -1,9 +1,11 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import "./profile.css"
 import pic from "../img/features.png"
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 const Profile = () => {
+
 
     const [user, setUser] = useState({
         email: "",
@@ -14,8 +16,31 @@ const Profile = () => {
         gap:"",
         loc:"",
         exp:"",
+        github:"",
         skills:[""]
     })
+
+    // const [reg, setReg] = useState({
+    //     email: "",
+    // })
+
+    const {id} = useParams()
+
+    useEffect(() => {
+        // fetch user data from backend
+        axios
+          .get(`http://localhost:5000/employee/profiledisplay?id=${id}`,{mode:"cors"})
+          .then(response => {
+            setUser({
+                email: response.data.email
+            });
+            console.log("best: ", user)
+          })
+          .catch(error => {
+            console.error(error);
+          });
+          console.log("effect: ", user.email)
+      }, []);
 
     const handleChange = e => {
         // const { name, value } = e.target
@@ -40,6 +65,7 @@ const Profile = () => {
             gap: user.gap,
             loc: user.loc,
             exp: user.exp,
+            github: user.github,
             skill:user.skill
         }
         console.log("Hello BK: ",userbk)
@@ -83,7 +109,7 @@ const Profile = () => {
                         </div>
                          <div className="form-input">
                             <label for="email" className="required">Email</label>
-                            <input  className='innput' type="text" name="email" id="email" onChange={handleChange}/>
+                            <input  className='innput' type="text" name="email" id="email" onChange={handleChange}  defaultValue={user ? user.email : "nullemail"}/>
                         </div>
                         <div className="form-input">
                             <label for="company" className="required">DOB</label>
@@ -126,6 +152,10 @@ const Profile = () => {
                         <div className="form-input">
                             <label for="phone_number" className="required">Experience</label>
                             <input className='innput' type="number" name="exp" id="experience" onChange={handleChange}/>
+                        </div>
+                        <div className="form-input">
+                            <label for="phone_number" className="required">Github Profile</label>
+                            <input className='innput' type="text" name="github" id="github" onChange={handleChange}/>
                         </div>
                         {/* <div className="form-input">
                             <label for="phone_number" className="required">Resume</label>

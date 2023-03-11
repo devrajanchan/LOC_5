@@ -20,9 +20,6 @@ const employeeSchema = new mongoose.Schema({
         type:Date,
         // required:true
     },
-    linkeldin:{
-        type:String,
-    },
     skill:{
         type : [String],
     },
@@ -38,7 +35,13 @@ const employeeSchema = new mongoose.Schema({
     },
     loc:{
         type:String
-    }
+    },
+    linkeldin:{
+        type:String,
+    },
+    github:{
+        type:String,
+    },
 
 })
 
