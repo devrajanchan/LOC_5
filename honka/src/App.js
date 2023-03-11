@@ -16,6 +16,7 @@ import Login from './Components/Login/Login';
 import Register from './Register';
 import Profile from './Components/Profile/Profile';
 import ProfileDisplay from "./Components/ProfileDisplay/ProfileDisplay"
+import Contact from './Components/Contact';
 
 // import Services from './Components/Navbar/Services';
 // import Landing from  "./Components/Landing"
@@ -44,7 +45,7 @@ function App() {
         {/* <Route exact path="/profile" element={<Profile />}></Route> */}
         <Route exact path="/example" element={<Example />}></Route>
 
-        {/* <Route exact path="/community" element={<Community />}></Route> */}
+        <Route exact path="/contact" element={<Contact />}></Route>
         <Route exact path="/profiledisplay" element={<ProfileDisplay />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/register" element={<Register />}></Route>
