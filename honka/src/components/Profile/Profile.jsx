@@ -127,33 +127,20 @@ const Profile = () => {
                             <label for="phone_number" className="required">LinkedIn Profile</label>
                             <input className='innput' type="text" name="linkeldin" id="Linkedln" onChange={handleChange}/>
                         </div>
+
                         <div className="form-input">
-                            <label for="phone_number" className="required">Github Profile</label>
-                            <input className='innput' type="text" name="github" id="Linkedln" onChange={handleChange}/>
-                        </div>
-                        {/* <div className="form-input">
                             <label for="phone_number" className="required">Resume</label>
-                            <input className='innput' type="file" name="Resume" id="experience" />
-                        </div> */}
+                            <input className='innput' type="file" name="linkeldin" id="Linkedln" onChange={handleChange}/>
+                        </div>
+                        
+
 
                        
 
                     </div>
                     <div className="form-group">
-                        {/* <div className="form-select">
-                            <div className="label-flex">
-                                <label for="meal_preference">Skills</label>
-                            </div>
-                            <div className="select-list">
-                                <select name="skill" id="skill">
-                                    <option value="Vegetarian">Vegetarian</option>
-                                    <option value="Kosher">Kosher</option>
-                                    <option value="Asian Vegetarian">Asian Vegetarian</option>
-                                </select>
-                            </div>
+                    
 
-                        </div> */}
-                 
                         <div className="form-input">
                             <label for="chequeno">Gap Years</label>
                             <input className='innput' type="number" name="gap" id="gap" onChange={handleChange}/>
@@ -168,17 +155,21 @@ const Profile = () => {
                         </div>
                         <div className="form-input">
                             <label for="phone_number" className="required">Skill 1</label>
-                            <input className='innput' type="text" name="skill1" id="Linkedln" onChange={handleChange}/>
+                            <input className='innput' type="number" name="exp" id="experience" onChange={handleChange}/>
                         </div>
                         <div className="form-input">
                             <label for="phone_number" className="required">Skill 2</label>
-                            <input className='innput' type="text" name="skill2" id="Linkedln" onChange={handleChange}/>
+                            <input className='innput' type="text" name="linkeldin" id="Linkedln" onChange={handleChange}/>
                         </div>
-
-                        <div className="form-input">
+                    
+                    <div className="form-input">
                             <label for="phone_number" className="required">Skill 3</label>
-                            <input className='innput' type="text" name="skill3" id="Linkedln" onChange={handleChange}/>
-                        </div>  
+                            <input className='innput' type="text" name="linkeldin" id="Linkedln" onChange={handleChange}/>
+                        </div>
+                        {/* <div className="form-input">
+                            <label for="phone_number" className="required">Resume</label>
+                            <input className='innput' type="file" name="Resume" id="experience" />
+                        </div> */}
                     </div>
                 </div>
                 
