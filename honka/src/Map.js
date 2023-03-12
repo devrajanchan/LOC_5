@@ -71,7 +71,7 @@ const MumbaiMap = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://localhost:7153/api/jobs/user/user1%40example.com?pageNo=1');
+        const response = await axios.get('https://localhost:7153/api/jobs/user/gautammalpani33@gmail.com?pageNo=1');
         console.log(response.data[0])
         setLocations(response.data);
       } catch (error) {

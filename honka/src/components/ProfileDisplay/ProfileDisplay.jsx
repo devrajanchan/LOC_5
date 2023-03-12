@@ -11,7 +11,7 @@ const ProfileDisplay = () => {
 
       
       console.log(id)
-      axios.get(`http://localhost:5000/employee/profiledisplay?id=${id}`,{mode:"cors"})  
+      axios.get(`http://localhost:5000/employee/profiledisplay?id=640c373fbe7a13b3b92f4edc`,{mode:"cors"})  
       // axios.get(`http://localhost:5000/employee/profiledisplay?id=640c373fbe7a13b3b92f4edc`,{mode:"cors"})  
       .then(response => {
         setUser(response.data);
@@ -165,26 +165,19 @@ const ProfileDisplay = () => {
                   <div className="card h-100">
                     <div className="card-body">
                       <h6 className="d-flex align-items-center mb-3">Skills</h6>
-                      <small>Web Development</small>
+                      <small>{user ? user.skill1 : "nullbirth"}</small>
                       <div className="progress mb-3" style={{height: "5px"}}>
                         <div className="progress-bar bg-primary" role="progressbar" style={{width: "80%"}} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
-                      <small>Speaking Skills</small>
+                      <small>{user ? user.skill2 : "nullbirth"}</small>
                       <div className="progress mb-3" style={{height: "5px"}}>
                         <div className="progress-bar bg-primary" role="progressbar" style={{width: "72%"}} aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
-                      <small>Adaptiviness</small>
+                      <small>{user ? user.skill3 : "nullbirth"}</small>
                       <div className="progress mb-3" style={{height: "5px"}}>
                         <div className="progress-bar bg-primary" role="progressbar" style={{width: "89%"}} aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
                       </div>
-                      <small>React</small>
-                      <div className="progress mb-3" style={{height: "5px"}}>
-                        <div className="progress-bar bg-primary" role="progressbar" style={{width: "55%"}} aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <small>Python</small>
-                      <div className="progress mb-3" style={{height: "5px"}}>
-                        <div className="progress-bar bg-primary" role="progressbar" style={{width: "66%"}} aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                      
                     </div>
                   </div>
                 </div>

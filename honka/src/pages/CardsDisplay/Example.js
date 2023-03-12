@@ -6,7 +6,7 @@ import ExampleCards from './ExampleCards';
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetchData('user@example.com').then(data => setData(data));
+    fetchData('gautammalpani33@gmail.com').then(data => setData(data));
   }, []);
   return (
     <>
