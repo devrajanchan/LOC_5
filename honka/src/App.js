@@ -38,7 +38,7 @@ function App() {
         <Route exact path="/adminStatus" element={<AdminStatus />}></Route>
 
         <Route exact path="/contact" element={<Contact />}></Route>
-        <Route exact path="/profiledisplay/:id" element={<ProfileDisplay />}></Route>
+        <Route exact path="/profiledisplay/640c373fbe7a13b3b92f4edc" element={<ProfileDisplay />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/register" element={<Register />}></Route>
         <Route exact path="/card" element={<Cards />}></Route>
