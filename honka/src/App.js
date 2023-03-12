@@ -21,6 +21,8 @@ import Contact from './Components/Contact';
 import Landing from "./pages/Landing/Landing"
 
 import MumbaiMap from './Map';
+import Cards from './Components/Card/Cards';
+import AdminStatus from './Components/AdminStatus';
 
 function App() {
   return (
@@ -34,11 +36,13 @@ function App() {
     
         <Route exact path="/profile" element={<Profile />}></Route>
         <Route exact path="/example" element={<Example />}></Route>
+        <Route exact path="/adminStatus" element={<AdminStatus />}></Route>
 
         <Route exact path="/contact" element={<Contact />}></Route>
         <Route exact path="/profiledisplay/:id" element={<ProfileDisplay />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/register" element={<Register />}></Route>
+        <Route exact path="/card" element={<Cards />}></Route>
         </Routes>
       <Footer/>
     </>
