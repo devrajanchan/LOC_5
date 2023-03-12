@@ -34,7 +34,7 @@ const Landing  = () => {
               <img src={logo0} className="img-fluid" alt="image"/>
             </div>
           </div>
-        </div>
+        </div>    
 
       </section>
 

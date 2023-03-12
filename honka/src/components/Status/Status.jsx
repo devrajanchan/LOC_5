@@ -1,6 +1,6 @@
 import React from 'react'
 import pic1 from '../../img/jpmc.jpg'
-import pic2 from '../../img/goldman.png'
+import pic2 from '../../img/lockheed.png'
 import pic3 from '../../img/morgan-stanley-logo.png'
 import "./status.css"
 
@@ -34,10 +34,12 @@ const Status = () => {
 
                 <div class="card-content">
 
-                  <h2 class="price"> JP Morgan Chase & Co.</h2>
+                  <h2 class="price"> JPMC</h2>
+
+                  <h2 class="card-text"> Software Engineer</h2>
 
                   <h3 class="card-text">
-                    A US Based fintect company
+                  At the dawn of a new space age, Lockheed Martin is a pioneer, partner, innovator and builder.
                   </h3>
 
                   
@@ -48,7 +50,7 @@ const Status = () => {
                   
 
                   <p class="price">
-                    Accepted
+                    Shortlisted
                   </p>
 
                 </div>
@@ -65,11 +67,12 @@ const Status = () => {
 
                 <div class="card-content">
 
-                  <h3 class="price">Goldman Sach's</h3>
+                  <h3 class="price">Lockheed Martin</h3>
+
+                  <h2 class="card-text"> Software Engineer - Early Start</h2>
 
                   <p class="card-text">
-                    Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
-                    cras, aspernatur.
+                  At the dawn of a new space age, Lockheed Martin is a pioneer, partner, innovator and builder.
                   </p>
 
                   
@@ -112,6 +115,8 @@ const Status = () => {
                 <div class="card-content">
 
                   <h3 class="price">Morgan Stanley</h3>
+
+                  <h2 class="card-text"> Software Engineer - Assistant</h2>
 
                   <p class="card-text">
                     Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,

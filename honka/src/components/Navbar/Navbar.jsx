@@ -12,7 +12,7 @@ const Navbar = () => {
 
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt=""/>
-        <span>Hire Hub</span>
+        <span>HireHub</span>
       </a>
 
       <nav id="navbar" class="navbar">
@@ -43,7 +43,7 @@ const Navbar = () => {
           Profile
           </Link>
           </li>
-         
+        
           
           {/* <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -64,6 +64,9 @@ const Navbar = () => {
           </li> */}
          <li> <Link to="/contact" className="nav-link scrollto ">
           Contact
+          </Link></li>
+          <li> <Link to="/Card" className="nav-link scrollto ">
+          Manager
           </Link></li>
           <Link to="/login" className="getstarted scrollto ">
           Login
