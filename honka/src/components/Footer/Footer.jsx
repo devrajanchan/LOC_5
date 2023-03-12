@@ -1,6 +1,7 @@
 import React from 'react'
+import "../Navbar/navbar.css"
 
-export const Footer = () => {
+ const Footer = () => {
   return (
     <div>
         <footer id="footer" class="footer">
@@ -76,11 +77,13 @@ export const Footer = () => {
   </div>
 </div>
 
+
 <div class="container">
   <div class="copyright">
     &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved
   </div>
   <div class="credits">
+   
     Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
   </div>
 </div>
@@ -88,3 +91,4 @@ export const Footer = () => {
     </div>
   )
 }
+export default Footer
