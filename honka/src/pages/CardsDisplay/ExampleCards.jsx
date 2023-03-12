@@ -21,7 +21,7 @@ function MyVerticallyCenteredModal(props) {
         <Modal.Title id="contained-modal-title-vcenter">
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className="d-flex justify-content-center">
         <h4>{props?.i?.company}</h4>
         <p>
           <h5>Job Designation</h5>
@@ -60,7 +60,7 @@ export default function ExampleCards({i}) {
 <>
 
     <div className='row'>
-      <div  style={{maxWidth:"300px",justifyContent:"center"}}>
+      <div  style={{maxWidth:"500px",marginLeft:"37%", marginTop:"4rem"}}>
     <Card >
       <Card.Img variant="top" src={jpmclogo} />
       <Card.Body>
