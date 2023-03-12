@@ -1,7 +1,7 @@
 import React from 'react'
-import pic1 from '../img/values-1.png'
-import pic2 from '../img/values-1.png'
-import pic3 from '../img/values-1.png'
+import pic1 from '../../img/jpmc.jpg'
+import pic2 from '../../img/goldman.png'
+import pic3 from '../../img/morgan-stanley-logo.png'
 import "./status.css"
 
 const Status = () => {
@@ -18,17 +18,11 @@ const Status = () => {
 
           <h2 class="h2 section-title">Application Status</h2>
 
-          <p class="section-text">
-            Fusce hic augue velit wisi quibusdam pariatur, iusto primis, nec nemo, rutrum. Vestibulum cumque laudantium.
-            Sit ornare
-            mollitia tenetur, aptent.
-          </p>
-
-          <div class="btn-group mb-5" style={{marginLeft:"35%"}} role="group" aria-label="Basic example">
+          {/* <div class="btn-group mb-5" style={{marginLeft:"35%"}} role="group" aria-label="Basic example">
   <button type="button" class="btn btn-primary" style={{}}  onClick={() => handleClick('dummy value 1', 'dummy value 2')} >Left</button>
   <button type="button" class="btn btn-primary">Middle</button>
   <button type="button" class="btn btn-primary">Right</button>
-</div>
+</div> */}
           <ul class="package-list">
 
             <li>
@@ -40,64 +34,22 @@ const Status = () => {
 
                 <div class="card-content">
 
-                  <h3 class="h3 card-title"> The Great Holiday On Beach</h3>
+                  <h2 class="price"> JP Morgan Chase & Co.</h2>
 
-                  <p class="card-text">
-                    Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
-                    cras, aspernatur.
-                  </p>
+                  <h3 class="card-text">
+                    A US Based fintect company
+                  </h3>
 
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <div class="meta-box">
-                        <ion-icon name="time"></ion-icon>
-
-                        <p class="text">7D/6N</p>
-                      </div>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <div class="meta-box">
-                        <ion-icon name="people"></ion-icon>
-
-                        <p class="text">pax: 10</p>
-                      </div>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <div class="meta-box">
-                        <ion-icon name="location"></ion-icon>
-
-                        <p class="text">Mumbai</p>
-                      </div>
-                    </li>
-
-                  </ul>
-
+                  
                 </div>
 
                 <div class="card-price">
 
-                  <div class="wrapper">
-
-                    
-                    <div class="card-rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                  </div>
+                  
 
                   <p class="price">
-                    750
-                    <span>/ per person</span>
+                    Accepted
                   </p>
-
-                  <button class="btn btn-secondary">Book Now</button>
 
                 </div>
 
@@ -113,40 +65,14 @@ const Status = () => {
 
                 <div class="card-content">
 
-                  <h3 class="h3 card-title">Summer Holiday To The Oxolotan River</h3>
+                  <h3 class="price">Goldman Sach's</h3>
 
                   <p class="card-text">
                     Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
                     cras, aspernatur.
                   </p>
 
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <div class="meta-box">
-                        <ion-icon name="time"></ion-icon>
-
-                        <p class="text">7D/6N</p>
-                      </div>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <div class="meta-box">
-                        <ion-icon name="people"></ion-icon>
-
-                        <p class="text">pax: 10</p>
-                      </div>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <div class="meta-box">
-                        <ion-icon name="location"></ion-icon>
-
-                        <p class="text">North India</p>
-                      </div>
-                    </li>
-
-                  </ul>
+                  
 
                 </div>
 
@@ -167,11 +93,9 @@ const Status = () => {
                   </div>
 
                   <p class="price">
-                    520
-                    <span>/ per person</span>
+                    Rejected
                   </p>
 
-                  <button class="btn btn-secondary">Book Now</button>
 
                 </div>
 
@@ -187,66 +111,21 @@ const Status = () => {
 
                 <div class="card-content">
 
-                  <h3 class="h3 card-title">The Gorgeous Goa</h3>
+                  <h3 class="price">Morgan Stanley</h3>
 
                   <p class="card-text">
                     Laoreet, voluptatum nihil dolor esse quaerat mattis explicabo maiores, est aliquet porttitor! Eaque,
                     cras, aspernatur.
                   </p>
 
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <div class="meta-box">
-                        <ion-icon name="time"></ion-icon>
-
-                        <p class="text">7D/6N</p>
-                      </div>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <div class="meta-box">
-                        <ion-icon name="people"></ion-icon>
-
-                        <p class="text">pax: 10</p>
-                      </div>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <div class="meta-box">
-                        <ion-icon name="location"></ion-icon>
-
-                        <p class="text">Goa</p>
-                      </div>
-                    </li>
-
-                  </ul>
-
                 </div>
 
                 <div class="card-price">
 
-                  <div class="wrapper">
-
-                  
-
-                    <div class="card-rating">
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </div>
-
-                  </div>
 
                   <p class="price">
-                    660
-                    <span>/ per person</span>
+                    Pending
                   </p>
-
-                  <button class="btn btn-secondary">Book Now</button>
-
                 </div>
 
               </div>
@@ -254,7 +133,7 @@ const Status = () => {
 
           </ul>
 
-          <button class="btn btn-primary " style={{justifyContent:"center",display:"flex"}}>View All Packages</button>
+          <button class="btn btn-primary " style={{justifyContent:"center",display:"flex"}}>View All Offers</button>
 
         </div>
       </section>
