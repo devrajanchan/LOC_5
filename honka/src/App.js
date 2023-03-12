@@ -5,14 +5,13 @@ import Home from './Components/Home';
 import Example from './pages/CardsDisplay/Example';
 // import MainImage from './Components/Navbar/MainImage';
 // import Login from './Components/Login/Login';
-import Navbar from './Components/Navbar';
-import Landing from './pages/Landing/Landing';
-import { Footer } from './Components/Footer';
-import Navbar from './Components/Navbar/Navbar';
-import Slider from './Components/Slider';
-import Login from './Components/Login/Login';
-import Register from './Register';
-import Profile from './components/Profile/Profile';
+// import Navbar from './Components/Navbar';
+// import Landing from './pages/Landing/Landing';
+// import { Footer } from './Components/Footer';
+// import Slider from './Components/Slider';
+// import Login from './Components/Login/Login';
+// import Register from './Register';
+// import Profile from './Components/Profile/Profile';
 // import Services from './Components/Navbar/Services';
 // import Landing from  "./Components/Landing"
 // import TravelHome from './Components/TravelHome';
@@ -22,7 +21,7 @@ import Profile from './components/Profile/Profile';
 // import Community from './Components/Community';
 
 // import Register from './Components/Register/Register';
-
+import AddJob from './pages/AddJobs/AddJob';
 
 // import {Route, Switch, Redirect} from "react-router-dom";
 
@@ -33,9 +32,7 @@ function App() {
     {/* <Navbar />
     <Landing/>
     <Footer/> */}
-    <Example/>
-  
-      {/* <Footer /> */}
+    <AddJob/>
        
     </>
     
