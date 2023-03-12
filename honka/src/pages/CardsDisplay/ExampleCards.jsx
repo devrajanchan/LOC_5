@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import {Card, CardGroup } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import jpmclogo from '../../img/jpmc.jpg'
+import Calendly from '../Calendly';
 
 function MyVerticallyCenteredModal(props) {
   console.log("data",props?.i);
@@ -38,6 +39,7 @@ function MyVerticallyCenteredModal(props) {
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
+        <Calendly/>
       </Modal.Footer>
     </Modal>
   
@@ -67,10 +69,9 @@ export default function ExampleCards({i}) {
         <Card.Title>{i?.header}</Card.Title>
         <Card.Text>
           {i?.company}
-          {i?.skills}
-          {/* <ul>
-            {skills}
-          </ul> */}
+        </Card.Text>
+        <Card.Text>
+          {i?.jobDesignation} 
         </Card.Text>
         <Button variant="primary" onClick={() => setModalShow(true)}>Go somewhere</Button>
         <MyVerticallyCenteredModal
@@ -78,6 +79,7 @@ export default function ExampleCards({i}) {
         onHide={() => setModalShow(false)}
         i={i}
       />
+      
       </Card.Body>
     </Card>
    

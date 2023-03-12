@@ -5,6 +5,10 @@ import pic3 from '../img/values-1.png'
 import "./status.css"
 
 const Status = () => {
+  const handleClick = (value1, value2) => {
+    console.log(`Value 1: ${value1}`);
+    console.log(`Value 2: ${value2}`);
+  };
   return (
     <div>
        <section class="package" id="package">
@@ -21,7 +25,7 @@ const Status = () => {
           </p>
 
           <div class="btn-group mb-5" style={{marginLeft:"35%"}} role="group" aria-label="Basic example">
-  <button type="button" class="btn btn-primary" style={{}}>Left</button>
+  <button type="button" class="btn btn-primary" style={{}}  onClick={() => handleClick('dummy value 1', 'dummy value 2')} >Left</button>
   <button type="button" class="btn btn-primary">Middle</button>
   <button type="button" class="btn btn-primary">Right</button>
 </div>

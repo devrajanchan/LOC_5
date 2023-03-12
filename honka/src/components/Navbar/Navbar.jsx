@@ -12,7 +12,7 @@ const Navbar = () => {
 
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt=""/>
-        <span>FlexStart</span>
+        <span>Hire Hub</span>
       </a>
 
       <nav id="navbar" class="navbar">
