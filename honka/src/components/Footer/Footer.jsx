@@ -6,16 +6,17 @@ import "../Navbar/navbar.css"
     <div>
         <footer id="footer" class="footer">
 
-<div class="footer-newsletter">
+<div class="footer-newsletter mt-4">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-12 text-center">
+      <div class="col-lg-12 text-center mt-5">
         <h4>Our Newsletter</h4>
         <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
       </div>
       <div class="col-lg-6">
         <form action="" method="post">
-          <input type="email" name="email"/><input type="submit" value="Subscribe"/>
+          <input type="email" name="email"/>
+          <input  className='' type="submit" value="Subscribe"/>
         </form>
       </div>
     </div>
@@ -79,10 +80,10 @@ import "../Navbar/navbar.css"
 
 
 <div class="container">
-  <div class="copyright">
+  <div class="copyright mt-5">
     &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved
   </div>
-  <div class="credits">
+  <div class="credits mb-3 pb-3">
    
     Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
   </div>

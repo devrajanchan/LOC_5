@@ -108,7 +108,10 @@ exports.createProfile = async (req,res)=>{
         email:req.body.email,
         birth:req.body.birth,
         linkeldin:req.body.linkeldin,
-        skill:req.body.skill,
+        github:req.body.github,
+        skill1:req.body.skill1,
+        skill2:req.body.skill2,
+        skill3:req.body.skill3,
         // image: {
         //     data: fs.readFileSync(req.file.path),
         //     contentType: req.file.mimetype
@@ -176,7 +179,10 @@ exports.Profiles= async (req,res)=>{
                 email:req.body.email,
                 birth:req.body.birth,
                 linkeldin:req.body.linkeldin,
-                skill:req.body.skill,
+                github:req.body.github,
+                skill1:req.body.skill1,
+                skill2:req.body.skill2,
+                skill3:req.body.skill3,
                 // image: {
                 //     data: fs.readFileSync(req.file.path),
                 //     contentType: req.file.mimetype
@@ -188,6 +194,7 @@ exports.Profiles= async (req,res)=>{
             try{
                 const result = await emp.save()
                 if(result){
+                    console.log("created successfully")
                     res.status(201).json(result);
                 }
             }catch(e){
@@ -205,6 +212,21 @@ exports.ProfileDisplay= async (req,res)=>{
   const id = req.query.id;
   try{
     const data = await Emp.findById(id)
+    if(!data){
+      res.status(404).send({ message : "Not found user with id "+ id})
+  }else{
+      res.send(data)
+  }
+  }catch(e){
+    res.status(500).send({ message: "Error in retrieving user with id " + id})
+  }
+
+}
+
+exports.profileLogin= async (req,res)=>{
+  const id = req.query.id;
+  try{
+    const data = await loginEmp.findById(id)
     if(!data){
       res.status(404).send({ message : "Not found user with id "+ id})
   }else{
