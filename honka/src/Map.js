@@ -95,7 +95,7 @@ const MumbaiMap = () => {
   return (
     <div className='mt-5'>
 
-    <MapContainer center={[18.9217, 72.8342]} zoom={12} style={{ height: '500px', width: '100%' }}>
+    <MapContainer center={[19.1900092, 72.8414846]} zoom={17} style={{ height: '500px', width: '100%' }}>
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {locations.map((location) => (
         <Marker
