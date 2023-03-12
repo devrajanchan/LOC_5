@@ -25,7 +25,7 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Routes>
+    {<Routes>
         <Route exact path="/" element={<Landing />}></Route>
         <Route exact path="/home" element={<Home />}></Route>
         <Route exact path="/status" element={<Status/>} ></Route>
@@ -38,7 +38,7 @@ function App() {
         <Route exact path="/profiledisplay/:id" element={<ProfileDisplay />}></Route>
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/register" element={<Register />}></Route>
-        </Routes>
+        </Routes> }
       <Footer/>
     </>
     

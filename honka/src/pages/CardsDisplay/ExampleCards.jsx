@@ -8,7 +8,10 @@ function MyVerticallyCenteredModal(props) {
   console.log("data",props?.i);
   return (
     
-    <Modal
+
+
+
+         <Modal
       {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
@@ -37,15 +40,9 @@ function MyVerticallyCenteredModal(props) {
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
+  
   );
 }
-
-
-
-
-
-
-
 
 
 
@@ -59,8 +56,12 @@ export default function ExampleCards({i}) {
   console.log("i "+ i.company);
     const [modalShow, setModalShow] = React.useState(false);
   return (
-    
-    <Card style={{ width: '18rem',display:'flex',justifyContent:'centers' }}>
+    // <div className='container' style={ {width: '18rem' }} > 
+<>
+
+    <div className='row'>
+      <div  style={{maxWidth:"300px",justifyContent:"center"}}>
+    <Card >
       <Card.Img variant="top" src={jpmclogo} />
       <Card.Body>
         <Card.Title>{i?.header}</Card.Title>
@@ -79,7 +80,10 @@ export default function ExampleCards({i}) {
       />
       </Card.Body>
     </Card>
-    
-    
+   
+    </div>
+    </div>
+
+    </>
   );
 }
