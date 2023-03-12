@@ -1,4 +1,8 @@
 import React from 'react'
+import MoodIcon from '@mui/icons-material/Mood';
+import DescriptionIcon from '@mui/icons-material/Description';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import EngineeringIcon from '@mui/icons-material/Engineering';
 
 export const Count = () => {
   return (
@@ -10,40 +14,41 @@ export const Count = () => {
     
               <div className="col-lg-3 col-md-6">
                 <div className="count-box">
-                  <i class="bi bi-emoji-smile"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" className="purecounter"></span>
+                  <MoodIcon/>
+                  <div className='mr-2'>
+                    
                     <p>Happy Clients</p>
+                    <p>15k+</p>
                   </div>
                 </div>
               </div>
     
               <div className="col-lg-3 col-md-6">
                 <div className="count-box">
-                  <i class="bi bi-journal-richtext"  style={{color: "#ee6c20"}} ></i>
+                <DescriptionIcon/>
                   <div>
-                    <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" className="purecounter"></span>
                     <p>Projects</p>
+                    <p>521</p>
                   </div>
                 </div>
               </div>
     
               <div className="col-lg-3 col-md-6">
                 <div className="count-box">
-                  <i className="bi bi-headset" style={{color: "#15be56"}}></i>
+                <SupportAgentIcon/>
                   <div>
-                    <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" className="purecounter"></span>
                     <p>Hours Of Support</p>
+                    <p>1463</p>
                   </div>
                 </div>
               </div>
     
               <div className="col-lg-3 col-md-6">
                 <div className="count-box">
-                  <i class="bi bi-people" style={{color: "#bb0852"}}></i>
+                <EngineeringIcon/>
                   <div>
-                    <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" className="purecounter"></span>
                     <p>Hard Workers</p>
+                    <p>4</p>
                   </div>
                 </div>
               </div>
