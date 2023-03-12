@@ -20,11 +20,14 @@ const employeeSchema = new mongoose.Schema({
         type:Date,
         // required:true
     },
-    linkeldin:{
-        type:String,
+    skill1:{
+        type:String
     },
-    skill:{
-        type : [String],
+    skill2:{
+        type:String
+    },
+    skill3:{
+        type:String
     },
     // image:{
     //     data: Buffer,
@@ -38,6 +41,12 @@ const employeeSchema = new mongoose.Schema({
     },
     loc:{
         type:String
+    },
+    linkeldin:{
+        type:String,
+    },
+    githubs:{
+        type:String,
     }
 
 })
