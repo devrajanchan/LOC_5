@@ -20,8 +20,14 @@ const employeeSchema = new mongoose.Schema({
         type:Date,
         // required:true
     },
-    skill:{
-        type : [String],
+    skill1:{
+        type:String
+    },
+    skill2:{
+        type:String
+    },
+    skill3:{
+        type:String
     },
     // image:{
     //     data: Buffer,
@@ -39,9 +45,9 @@ const employeeSchema = new mongoose.Schema({
     linkeldin:{
         type:String,
     },
-    github:{
+    githubs:{
         type:String,
-    },
+    }
 
 })
 

@@ -108,7 +108,10 @@ exports.createProfile = async (req,res)=>{
         email:req.body.email,
         birth:req.body.birth,
         linkeldin:req.body.linkeldin,
-        skill:req.body.skill,
+        github:req.body.github,
+        skill1:req.body.skill1,
+        skill2:req.body.skill2,
+        skill3:req.body.skill3,
         // image: {
         //     data: fs.readFileSync(req.file.path),
         //     contentType: req.file.mimetype
@@ -177,7 +180,9 @@ exports.Profiles= async (req,res)=>{
                 birth:req.body.birth,
                 linkeldin:req.body.linkeldin,
                 github:req.body.github,
-                skill:req.body.skill,
+                skill1:req.body.skill1,
+                skill2:req.body.skill2,
+                skill3:req.body.skill3,
                 // image: {
                 //     data: fs.readFileSync(req.file.path),
                 //     contentType: req.file.mimetype

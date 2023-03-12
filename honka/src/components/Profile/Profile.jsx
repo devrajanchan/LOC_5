@@ -3,10 +3,10 @@ import "./profile.css"
 import pic from "../img/features.png"
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
-
-
+    const navigate = useNavigate()
     const [user, setUser] = useState({
         email: "",
         firstname: "",
@@ -16,8 +16,10 @@ const Profile = () => {
         gap:"",
         loc:"",
         exp:"",
-        github:"",
-        skills:[""]
+        skill1:"",
+        skill2:"",
+        skill3:"",
+        github:""
     })
 
     // const [reg, setReg] = useState({
@@ -31,7 +33,7 @@ const Profile = () => {
         axios
           .get(`http://localhost:5000/employee/profiledisplay?id=${id}`,{mode:"cors"})
           .then(response => {
-            setUser({
+            setUser({    
                 email: response.data.email
             });
             console.log("best: ", user)
@@ -43,6 +45,7 @@ const Profile = () => {
       }, []);
 
     const handleChange = e => {
+        console.log("effect: ", user.email)
         // const { name, value } = e.target
         console.log(user)
         const name=e.target.name
@@ -65,8 +68,11 @@ const Profile = () => {
             gap: user.gap,
             loc: user.loc,
             exp: user.exp,
-            github: user.github,
-            skill:user.skill
+            skill1:user.skill1,
+            skill2:user.skill2,
+            skill3:user.skill3,
+            github:user.github
+            
         }
         console.log("Hello BK: ",userbk)
         // const {id} = useParams()
@@ -80,6 +86,7 @@ const Profile = () => {
         .catch(error => {
           console.error(error);
         })
+        navigate("/")
       }
   return (
     <div>
@@ -120,15 +127,20 @@ const Profile = () => {
                             <label for="phone_number" className="required">LinkedIn Profile</label>
                             <input className='innput' type="text" name="linkeldin" id="Linkedln" onChange={handleChange}/>
                         </div>
-
-                        
-
+                        <div className="form-input">
+                            <label for="phone_number" className="required">Github Profile</label>
+                            <input className='innput' type="text" name="github" id="Linkedln" onChange={handleChange}/>
+                        </div>
+                        {/* <div className="form-input">
+                            <label for="phone_number" className="required">Resume</label>
+                            <input className='innput' type="file" name="Resume" id="experience" />
+                        </div> */}
 
                        
 
                     </div>
                     <div className="form-group">
-                        <div className="form-select">
+                        {/* <div className="form-select">
                             <div className="label-flex">
                                 <label for="meal_preference">Skills</label>
                             </div>
@@ -139,8 +151,9 @@ const Profile = () => {
                                     <option value="Asian Vegetarian">Asian Vegetarian</option>
                                 </select>
                             </div>
-                        </div>
-                        
+
+                        </div> */}
+                 
                         <div className="form-input">
                             <label for="chequeno">Gap Years</label>
                             <input className='innput' type="number" name="gap" id="gap" onChange={handleChange}/>
@@ -154,17 +167,21 @@ const Profile = () => {
                             <input className='innput' type="number" name="exp" id="experience" onChange={handleChange}/>
                         </div>
                         <div className="form-input">
-                            <label for="phone_number" className="required">Github Profile</label>
-                            <input className='innput' type="text" name="github" id="github" onChange={handleChange}/>
+                            <label for="phone_number" className="required">Skill 1</label>
+                            <input className='innput' type="text" name="skill1" id="Linkedln" onChange={handleChange}/>
                         </div>
-                        {/* <div className="form-input">
-                            <label for="phone_number" className="required">Resume</label>
-                            <input className='innput' type="file" name="Resume" id="experience" />
-                        </div> */}
+                        <div className="form-input">
+                            <label for="phone_number" className="required">Skill 2</label>
+                            <input className='innput' type="text" name="skill2" id="Linkedln" onChange={handleChange}/>
+                        </div>
+
+                        <div className="form-input">
+                            <label for="phone_number" className="required">Skill 3</label>
+                            <input className='innput' type="text" name="skill3" id="Linkedln" onChange={handleChange}/>
+                        </div>  
                     </div>
                 </div>
                 
-
          
 
                 <div className="form-submit">

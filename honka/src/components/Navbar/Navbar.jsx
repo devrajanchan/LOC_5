@@ -27,9 +27,12 @@ const Navbar = () => {
           </Link>
           </li>
           <li>
-          <Link to="/services" className="nav-link scrollto ">
-          Services
+          <Link to="/maps" className="nav-link scrollto ">
+          Maps
           </Link>
+          </li>
+          <li>
+          
           </li><li>
           <Link to="/status" className="nav-link scrollto ">
           Status
@@ -59,7 +62,9 @@ const Navbar = () => {
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> */}
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+         <li> <Link to="/contact" className="nav-link scrollto ">
+          Contact
+          </Link></li>
           <Link to="/login" className="getstarted scrollto ">
           Login
           </Link>
