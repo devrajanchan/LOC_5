@@ -9,7 +9,7 @@ import Example from './pages/CardsDisplay/Example';
 
 // import Landing from './pages/Landing/Landing';
 import Footer  from './Components/Footer/Footer';
-
+import AddJob from './pages/AddJobs/AddJob';
 import Navbar from './Components/Navbar/Navbar';
 import Status from './Components/Status/Status';
 import Login from './Components/Login/Login';
@@ -18,7 +18,7 @@ import Profile from './Components/Profile/Profile';
 import ProfileDisplay from "./Components/ProfileDisplay/ProfileDisplay"
 import Contact from './Components/Contact';
 import Landing from "./pages/Landing/Landing"
-
+import Calendly  from './pages/Calendly';
 import MumbaiMap from './Map';
 import Cards from './Components/Card/Cards';
 import AdminStatus from './Components/AdminStatus';
