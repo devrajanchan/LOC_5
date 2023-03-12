@@ -1,6 +1,8 @@
 import {useState, useEffect} from 'react'
 import "./card.css"
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 import axios from 'axios'
 
 const Request = () => {
@@ -171,7 +173,12 @@ const Request = () => {
             </div>
      </div>
      </div>
+     <Link to="/addJob" className="btn btn-primary mt-5 "style={{marginLeft:'45%'}}>
+     Create A Job
+          </Link>
+    
      </>
+
   )
 }
 

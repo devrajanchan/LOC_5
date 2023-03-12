@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import "./styles.css";
+import { Link } from 'react-router-dom'
+
 
 import CreateArea from "./CreateArea";
 import Note from "./Note";
@@ -23,8 +25,9 @@ function AddJob(props) {
   }
   return (
     <div className="App">
-      <Count
-        count={
+    <Link to='/adminStatus' className="btn btn-primary mt-5"> Check the Applicant's Status</Link>
+      <Count 
+        count={ 
           notes.length === 0
             ? "Add Your 1st Job"
             : `You have posted ${notes.length} jobs`
