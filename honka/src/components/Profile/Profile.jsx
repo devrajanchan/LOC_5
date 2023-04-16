@@ -4,7 +4,7 @@ import pic from "../img/features.png"
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
+// 
 const Profile = () => {
     const navigate = useNavigate()
     const [user, setUser] = useState({
